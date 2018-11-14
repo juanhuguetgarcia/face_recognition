@@ -1,0 +1,9 @@
+name: face_rec
+channels:
+  - defaults
+dependencies:
+  - cmake=3.12.2=he025d50_0
+  - vc=14.1=h0510ff6_4
+  - vs2015_runtime=14.15.26706=h3a45250_0
+prefix: C:\Users\JuanFranciscoHuguetG\AppData\Local\conda\conda\envs\face_rec
+
