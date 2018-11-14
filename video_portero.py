@@ -8,6 +8,12 @@ import numpy as np
 images_path = 'images/'
 encodings_path = 'encodings/'
 
+if not os.path.exists(images_path):
+    os.mkdir(images_path)
+
+if not os.path.exists(encodings_path):
+    os.mkdir(encodings_path)
+
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 def load_save_encoding(img_path):
@@ -72,21 +78,6 @@ while True:
             if True in matches:
                 first_match_index = matches.index(True)
                 name = known_face_names[first_match_index]
-                if name.lower() == 'maria':
-                    if i in range(0, 10):
-                        name = 'hmmmm....'
-                    if i in range(10, 30):
-                        name = 'me suena tu cara...'
-                    if i in range(30, 40):
-                        name = 'tu debes ser...Maria!'
-                    if i in range(40, 50):
-                        name = """oye, menos zanganear..."""
-                    if i in range(50, 65):
-                        name = 'y a trabajar!'
-                    if i > 65:
-                        name = np.random.choice(['Maria', 'Maria', 'Maria',
-                                                 'Reyes', 'de la O'])
-
 
             face_names.append(name)
 
